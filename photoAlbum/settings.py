@@ -23,7 +23,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = '+go^7df+njd3g!!1w+z7t9+h9d@zn)hmgvy_880mq9e9^c+i4!'
 
-# SECURITY WARNING: don't run with debug turned on in production
+# SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
 ALLOWED_HOSTS = ["https://apply-dot-to-to.herokuapp.com/"]
