@@ -9,6 +9,7 @@ https://docs.djangoproject.com/en/3.0/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/3.0/ref/settings/
 """
+import dj_database_url
 from datetime import timedelta
 
 import os
@@ -26,7 +27,7 @@ SECRET_KEY = '+go^7df+njd3g!!1w+z7t9+h9d@zn)hmgvy_880mq9e9^c+i4!'
 # SECURITY WARNING: don't run with debug turned on in production
 DEBUG = True
 
-ALLOWED_HOSTS = ["https://apply-dot-to-to.herokuapp.com/", "127.0.0.1"]
+ALLOWED_HOSTS = ["apply-dot-to-to.herokuapp.com", "127.0.0.1"]
 
 
 # Application definition
@@ -193,3 +194,7 @@ EMAIL_HOST_USER = 'ayobamiu@gmail.com'
 EMAIL_HOST_PASSWORD = 'confidential98521278'
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
+
+
+db_from_env = dj_database_url.config()
+DATABASES['default'].update(db_from_env)
