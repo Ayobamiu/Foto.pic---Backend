@@ -9,6 +9,7 @@ https://docs.djangoproject.com/en/3.0/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/3.0/ref/settings/
 """
+import django_heroku
 import dj_database_url
 from datetime import timedelta
 
@@ -195,6 +196,6 @@ EMAIL_HOST_PASSWORD = 'confidential98521278'
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
 
-
 db_from_env = dj_database_url.config()
 DATABASES['default'].update(db_from_env)
+django_heroku.settings(locals())
