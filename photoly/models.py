@@ -7,8 +7,8 @@ class Photo(models.Model):
     details = models.CharField(max_length=50)
     user = models.ForeignKey(
         User, on_delete=models.CASCADE)
-    favourite = models.ManyToManyField(
-        User, related_name="favourite")
+    favourite = models.ForeignKey(
+        User, related_name="favourite", blank=True, null=True, on_delete=models.CASCADE)
 
     def __str__(self):
         return self.details
